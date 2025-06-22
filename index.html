@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- меню -->
+    <img id="close-menu" class="menu-img" src="./img/close.png" alt="close">
+    <nav id="menu" class="menu">
+        <div class="menu-label">
+            <p>Меню</p>
+        </div>
+
+            <div class="menu-buttons">
+            <a class="menu-button" href="./index.html">Список задач</a>
+            <a class="menu-button-1" href="./html/create.html">+ Новая задача</a>
+        </div>
+    </nav>
+
+
+    <main class="task-list">
+        <div>
+            <h1>Список Задач</h1>
+            <div class="line"></div>
+
+            <div id="tasklist" class="list">
+
+
+                    <!-- <div class="task"> 
+                    <div class="name-task">
+                        <div class="checkbox"> </div>
+                        <p class="task-name">Название задачи</p>
+                    </div>
+                    <p class="discription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, magni consequatur ex iste veniam voluptatum ducimus mollitia tempore distinctio exercitationem voluptates cum id reiciendis perspiciatis! Illo quae quos quisquam dolorum.
+                    </p>
+                    <div class="task-date">
+                        <img class="calendar" src="./img/calendar.png" alt="calendar"> <p class="date">12/12/12</p>
+                        <img class="redact" src="./img/redact.png" alt="redact">
+                    </div>
+                    </div>
+                </div> -->
+
+
+            </div>
+        </div>
+        
+        
+    </main>
+
+
+    <script>
+
+      // меню
+      document.addEventListener('DOMContentLoaded', () => {
+    const closemenu = document.getElementById('close-menu');
+    const menu = document.getElementById('menu');
+
+    closemenu.addEventListener('click', () => {
+        menu.classList.toggle('open');
+
+        if (menu.classList.contains('open')) {
+            closemenu.style.transform = 'rotate(0deg)';
+        } else {
+            closemenu.style.transform = 'rotate(180deg)';
+        }
+    });
+});
+
+// перенос задачи
+      window.addEventListener("DOMContentLoaded", () => {
+    const taskListContainer = document.getElementById("tasklist");
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    tasks.forEach(task => {
+        const taskHTML = `
+        <div class="task"> 
+            <div class="name-task">
+                <div class="checkbox"> </div>
+                <p class="task-name">${task.name}</p>
+            </div>
+            <p class="discription">${task.description}</p>
+            <div class="task-date">
+                <img class="calendar" src="./img/calendar.png" alt="calendar"> 
+                <p class="date">${task.date}</p>
+                <img class="redact" src="./img/redact.png" alt="redact">
+            </div>
+        </div>
+        `;
+
+        taskListContainer.insertAdjacentHTML("beforeend", taskHTML);
+    });
+});
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+.menu {
+    position: fixed;
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    width: clamp(200px, 25vw, 400px);
+    font-size: clamp(14px, 1.5vw, 22px);
+    padding: clamp(10px, 2vw, 30px);
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+    border-right: 1px solid rgb(167, 167, 167);
+    transition: 0.2s;
+    filter: opacity(1);
+    z-index: 10;
+}
+.menu.open {
+    left: 0;
+}
+.menu-label {
+    display: flex;
+    color: rgb(78, 78, 78);
+    gap: clamp(10px, 30%, 80px);
+    margin-left: clamp(10px, 15%, 100px);
+    margin-top: clamp(5px, 3%, 40px);
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: clamp(10px, 2vw, 30px);
+    gap: clamp(5px, 0.5vw, 20px);
+}
+
+.menu-button,
+.menu-button-1,
+.menu-button-2,
+.menu-button-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(35px, 3vw, 60px);
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    font-size: clamp(12px, 1vw, 18px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.menu-button {
+    background-color: rgb(126, 255, 141);
+}
+.menu-button:hover {
+    background-color: rgb(42, 255, 67);
+}
+
+.menu-button-1 {
+    background-color: rgb(255, 179, 152);
+}
+.menu-button-1:hover {
+    background-color: rgb(255, 144, 104);
+}
+
+.menu-button-2 {
+    background-color: rgb(255, 152, 224);
+}
+.menu-button-2:hover {
+    background-color: rgb(255, 96, 207);
+}
+
+.menu-button-3 {
+    background-color: rgb(157, 152, 255);
+}
+.menu-button-3:hover {
+    background-color: rgb(103, 95, 255);
+}
+
+.menu-img {
+    width: clamp(23px, 2.5vw, 35px);
+    top: clamp(10px, 2vw, 35px);
+    left: clamp(10px, 2%, 30px);
+    cursor: pointer;
+    transition: 0.2s;
+    position: fixed;
+    transform: rotate(180deg);
+    z-index: 100;
+}
+.menu-img:hover {
+    filter: opacity(0.5);
+}
+
+
+/* Список задач */
+.task-list {
+    display: flex;
+    justify-content: center;
+    padding: clamp(40px, 2vw, 35px);
+    font-size: clamp(15px, 0.8vw, 25px);
+    text-align: left;
+}
+.line {
+    width: clamp(400px, 80vw, 1000px);
+    height: 1px;
+    background-color: rgb(207, 207, 207);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.list {
+    margin-top: clamp(25px, 2vw, 100px);
+
+}
+.task {
+    border-radius: 10px;
+    width: clamp(400px, 80vw, 1000px);
+    border: 1px solid rgb(207, 207, 207) ;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+}
+.checkbox {
+    width: clamp(30px, 1vw, 20px);
+    height: clamp(30px, 1vw, 20px);
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 8px;
+    margin: 1%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.name-task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(12px, 1.2vw, 25px);
+    margin: 0.5%;
+}
+.calendar {
+    width: clamp(20px, 3vw, 34px);
+}
+.task-date {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-top: clamp(3px, 0.7vw, 30px);
+    font-size: clamp(10px, 1vw, 20px);
+    color: rgb(82, 82, 82);
+    margin-left: 1.5%;
+    margin-bottom: 1.5%;
+    position: relative;
+}
+.discription {
+    color: rgb(181, 181, 181);
+    margin-top: clamp(5px,0.5vw,20px);
+    font-size: clamp(11px,1vw,20px);
+    margin-left: 2%;
+
+}
+.task-color {
+    display: flex;
+    border-radius: 100%;
+    background-color: rgba(255, 0, 0, 0.601);
+    width: 7px;
+    height: 7px;
+    margin-left: 5px;
+    justify-content: flex-end;
+}
+.redact {
+    width: clamp(15px, 2.5vw, 25px);
+    position: absolute;
+    cursor: pointer;
+    right: 1.5%;
+}
+/* Создание задачи */
+.create-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.create-container {
+    border-radius: 10px;
+    width: clamp(400px, 80vw, 1000px);
+    border: 1px solid rgb(207, 207, 207) ;
+    margin-top: clamp(25px, 2vw, 100px);
+    padding: 1.5%;
+    flex-direction: column;
+}
+.create {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: clamp(40px, 2vw, 100px);
+}
+.create-line {
+    width: clamp(200px, 25vw, 1000px);
+    height: 1px;
+    background-color: rgb(207, 207, 207);
+    margin-top: 5px;
+    margin-bottom: 5px;
+} 
+.name {
+    color: rgb(138, 138, 138);
+    border: 0;
+    font-size: clamp(12px, 1.2vw, 25px);
+    outline: none;
+    background: none;
+}
+.importance1 {
+    border-radius: 100%;
+    background-color: rgba(255, 0, 0, 0.601);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    transition: 0.2s;
+}
+.importance2 {
+    border-radius: 100%;
+    background-color: rgba(255, 153, 0, 0.601);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    transition: 0.2s;
+}
+.importance3 {
+    border-radius: 100%;
+    background-color: rgba(0, 255, 38, 0.601);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    transition: 0.2s;
+}
+.importance1:hover {
+    transform: scale(1.1);
+}
+.importance2:hover {
+    transform: scale(1.1);
+}
+.importance3:hover {
+    transform: scale(1.1);
+}
+.importance {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: clamp(12px, 1vw, 15px);
+    margin-top: clamp(10px,1vw,15px);
+}
+.disc {
+    color: rgb(138, 138, 138);
+    font-size: clamp(12px, 1.2vw, 25px);
+    border-radius: 5px;
+    width: clamp(350px, 50vw, 1000px);
+    border: 1px solid rgb(207, 207, 207) ;
+    padding: 1.5%;
+    outline: none;
+    display: flex;
+    margin-top: clamp(10px,1vw,15px);
+}
+.pickdate {
+    border: 1px solid rgb(207, 207, 207) ;
+    background: none;
+    padding: 1%;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: clamp(12px, 1vw, 15px);
+    transition: 0.3s;
+    color: rgb(105, 105, 105);
+    width: clamp(130px, 12vw, 180px);
+    height: clamp(35px, 4vw, 40px);
+}
+.pickdate:hover {
+    background-color: rgb(239, 239, 239);
+}
+.create-button {
+    border: 0;
+    background-color: rgb(255, 179, 152);
+    transition: 0.2s;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    width: clamp(110px, 10vw, 200px);
+    height: clamp(35px, 4vw, 50px);
+    font-size: clamp(15px, 1.2vw, 25px);
+    margin-top: clamp(10px,1vw,15px);
+}
+.create-button:hover {
+    background-color: rgb(255, 144, 104);
+}
+.date-modal {
+    display: flex;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.293);
+    width: clamp(170px, 13vw, 220px);
+    height: clamp(50px, 11vw, 60px);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+#modal {
+    display: none;
+}
+.datepick {
+    font-size: clamp(15px, 1.2vw, 25px);
+    padding: clamp(10px, 2vw, 15px);
+    border: 0;
+    border-radius: 10px;
+    color: rgb(105, 105, 105);
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 20px;         /* Не у всех сработает */
+    width: 35px;             /* Увеличиваем ширину */
+    height: 35px;            /* Увеличиваем высоту */
+    cursor: pointer;
+    background-color: #f4532f;     /* Цвет фона */
+    margin-left: clamp(-10px,-2vw,-20px);
+    border-radius: 6px;
+    filter: invert(1);       /* Цвет иконки */
+}
