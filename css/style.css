@@ -109,7 +109,7 @@ a {
     text-align: left;
 }
 .line {
-    width: clamp(400px, 80vw, 1000px);
+    width: clamp(345px, 80vw, 1000px);
     height: 1px;
     background-color: rgb(207, 207, 207);
     margin-top: 5px;
@@ -120,21 +120,23 @@ a {
 
 }
 .task {
-    border-radius: 10px;
-    width: clamp(400px, 80vw, 1000px);
+    border-radius: 5px;
+    width: clamp(350px, 80vw, 1000px);
     border: 1px solid rgb(207, 207, 207) ;
     margin-top: 3%;
     display: flex;
     flex-direction: column;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.299);
 }
 .checkbox {
-    width: clamp(30px, 1vw, 20px);
-    height: clamp(30px, 1vw, 20px);
+    width: clamp(17px, 1vw, 20px);
+    height: clamp(17px, 1vw, 20px);
     border: 1px solid rgb(184, 184, 184);
     border-radius: 8px;
-    margin: 1%;
+    margin: 1.5%;
     cursor: pointer;
     transition: 0.2s;
+    background-color: white;
 }
 
 .name-task {
@@ -188,12 +190,13 @@ a {
 
 }
 .create-container {
-    border-radius: 10px;
-    width: clamp(400px, 80vw, 1000px);
+    border-radius: 5px;
+    width: clamp(350px, 80vw, 1000px);
     border: 1px solid rgb(207, 207, 207) ;
     margin-top: clamp(25px, 2vw, 100px);
     padding: 1.5%;
     flex-direction: column;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.299);
 }
 .create {
     display: flex;
@@ -263,7 +266,7 @@ a {
     color: rgb(138, 138, 138);
     font-size: clamp(12px, 1.2vw, 25px);
     border-radius: 5px;
-    width: clamp(350px, 50vw, 1000px);
+    width: clamp(320px, 50vw, 1000px);
     border: 1px solid rgb(207, 207, 207) ;
     padding: 1.5%;
     outline: none;
@@ -331,3 +334,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 6px;
     filter: invert(1);       /* Цвет иконки */
 }
+/* Стиль чекбокса, когда он активирован */
