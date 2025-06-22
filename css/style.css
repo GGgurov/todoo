@@ -127,13 +127,14 @@ a {
     display: flex;
     flex-direction: column;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.299);
+    position: relative;
 }
 .checkbox {
     width: clamp(17px, 1vw, 20px);
     height: clamp(17px, 1vw, 20px);
     border: 1px solid rgb(184, 184, 184);
     border-radius: 8px;
-    margin: 1.5%;
+    margin: 2%;
     cursor: pointer;
     transition: 0.2s;
     background-color: white;
@@ -219,54 +220,13 @@ a {
     outline: none;
     background: none;
 }
-.importance1 {
-    border-radius: 100%;
-    background-color: rgba(255, 0, 0, 0.601);
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    border: 0;
-    transition: 0.2s;
-}
-.importance2 {
-    border-radius: 100%;
-    background-color: rgba(255, 153, 0, 0.601);
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    border: 0;
-    transition: 0.2s;
-}
-.importance3 {
-    border-radius: 100%;
-    background-color: rgba(0, 255, 38, 0.601);
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    border: 0;
-    transition: 0.2s;
-}
-.importance1:hover {
-    transform: scale(1.1);
-}
-.importance2:hover {
-    transform: scale(1.1);
-}
-.importance3:hover {
-    transform: scale(1.1);
-}
-.importance {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-size: clamp(12px, 1vw, 15px);
-    margin-top: clamp(10px,1vw,15px);
-}
+
 .disc {
     color: rgb(138, 138, 138);
     font-size: clamp(12px, 1.2vw, 25px);
     border-radius: 5px;
-    width: clamp(320px, 50vw, 1000px);
+    width: clamp(320px, 50vw, 800px);
+    height: clamp(100px, 4vw, 120px);
     border: 1px solid rgb(207, 207, 207) ;
     padding: 1.5%;
     outline: none;
@@ -284,7 +244,7 @@ a {
     transition: 0.3s;
     color: rgb(105, 105, 105);
     width: clamp(130px, 12vw, 180px);
-    height: clamp(35px, 4vw, 40px);
+    height: clamp(25px, 4vw, 40px);
 }
 .pickdate:hover {
     background-color: rgb(239, 239, 239);
@@ -309,7 +269,7 @@ a {
     margin-top: 10px;
     background-color: white;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.293);
-    width: clamp(170px, 13vw, 220px);
+    width: clamp(155px, 13vw, 220px);
     height: clamp(50px, 11vw, 60px);
     border-radius: 5px;
     margin-bottom: 20px;
@@ -334,4 +294,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 6px;
     filter: invert(1);       /* Цвет иконки */
 }
-/* Стиль чекбокса, когда он активирован */
+.close-btn {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: clamp(20px, 20px, 30px);
+    height: clamp(20px, 20px, 30px);
+    cursor: pointer;
+    position: absolute;
+    right: 1.5%;
+}
+
